@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+ 
+int main(){
+char data[100];
+char c= '*';
+FILE *fileTodo =NULL;
+fileTodo=fopen("Todos_list.txt ","a+");
+system("color 3F");
+printf("----YOUR TODO LIST----\n\n");
+while(1){
+printf("\n.....ADD YOUR ToDo HERE.....\n\n %c",c);
+gets(data);
+fputs(data,fileTodo);
+fclose(fileTodo);
+}
+}
